@@ -94,18 +94,18 @@ and types of all offers:
 
 The most completed offers are:
 
-![results](https://miro.medium.com/max/1400/1*xzy1JIU0exB1U5deGQyUTQ.png)
+![results](https://miro.medium.com/max/1224/1*aGZOJ-vjecqHcsP15_Ncrg.png)
 
 These are their info:
 
-![results](https://miro.medium.com/max/1400/1*DA7p4cN7wVeT-2tPGjJlQg.png)
+![results](https://miro.medium.com/max/1400/1*T_K5zt-J-2bS4mS_uTSfbw.png)
 
-They also caused the most amount spent by customers:
+They also made the most amount spent by customers:
 
-![results](https://miro.medium.com/max/1400/1*E5SIvtnJz8NmzEtrEiKS2g.png)
+![results](https://miro.medium.com/max/1400/1*Zl2Bmmhdg1O0xl-4YwmANg.png)
 
 and the ratio of the rewarded amount to the full amount spent is the lowest:
-![results](https://miro.medium.com/max/1400/1*L1FtNicw4tDThlLeFbkdLQ.png)
+![results](https://miro.medium.com/max/1400/1*fxz62lA93OMXPwlXZ2JWbA.png)
 
 I also tried to use another way to determine the effectiveness:
 - 1 means offer is effective: if offer_viewed == offer_completed. This means the customer saw the offer and felt motivated to use it.
