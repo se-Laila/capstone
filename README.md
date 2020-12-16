@@ -139,6 +139,44 @@ More details:
 
 ![results](https://miro.medium.com/max/988/1*X-tpNOf4I5UJ135a4WCVHg.png)
 
+### Modeling
+I made a simple supervised learning model that can predict if a customer will complete an offer. To prepare the data frame for modeling, I dropped all rows with no offer_id value since they have missing values in some of the columns.
+
+I also changed the offer_id values to numerical values (1 to 10).
+
+I split the data into X and y:
+X is the Features: ‘offer_id’, ‘time_hours’,’amount’,’rewarded_amount’,’offer_viewed’, ‘age_group_Adult’,’age_group_Senior’,’age_group_Youth’,’gender_F’,’gender_M’,’gender_O’‘membership_year’,’duration_days’,’offer_reward’,’channel_email’,’channel_mobile’, ‘channel_social’ ‘channel_web’, ’offer_type_bogo’, ’offer_type_discount’, ’offer_type_informational’]]
+y is the Target: offer_complete
+It has one of 2 numerical value:
+
+1: offer is complete
+
+0: offer is not complete
+
+and assigned the train_size to 0.6 (the test will be 0.4)
+
+The size of each data frame is:
+
+![results](https://miro.medium.com/max/1400/1*bgcg0OJ0HVH-hat3YD-tcQ.png)
+
+The Correlation of Features with Target:
+
+![results](https://miro.medium.com/max/1400/1*pAsLUazu7mtWQZ6xH_YmoA.png)
+
+Since this is a binary problem, RandomForestRegressor, DecisionTreeClassifie or LogisticRegression are more promising. However, I’ll try to use more models to see if there will be any difference.
+
+For building the model, I used the following classiefers:
+
+1. DecisionTreeClassifier: The accuracy of using the model on the training set and for prediction was 100%
+
+2. LogisticRegression: The accuracy of using the model on the training set and for prediction was 100%
+
+3. RandomForestRegressor: The accuracy of using the model on the training set and for prediction was 100%
+
+4.KNeighborsClassifier:The accuracy of using the model on the training set is 99.92% and for prediction was 99.8%
+
+All of these models have high accuracy score since the dataset I have is small and the text values were easily transformed into numerical.
+
 ### Conclusion 
 The data set contains simulated data that mimics customer behavior on the Starbucks rewards mobile app. It has 10 offers, 14825 complete records of customers, and 306534 records in the event log. 
 
@@ -159,10 +197,13 @@ We also saw that a senior male spent 1608 on coffee that month!
 
 Collecting Data: When running the experiment, add a primary key to connect between the offer different events, especially transaction and completed. Offer_expired value can be calculated on the spot and added to the data instead of reverse engineer it.
 
-Analysis: At the end of the analysis I realized that changing some column names or even values would have helped me throughout the analysis. For example: Person_id was a weird name for customer id. I could have changed it. Also the offers names: I could have used the first letter of the offer type. For example: ae264e3637204a6fb9bb56bc8210ddfd is of type BOGO. I could have changed it to BOGO1 or even B1. This would have enhanced readability.
-
 Performance: I have re-written some of the logic to enhance the performance. However, I haven't measured the time to run the entire workspace. More enhancements could be done.
 
+Model: More complicated models can be built to do the following:
+ - Predict the age_group, income_class, gender of the customers who will most likely view and complete offers.
+ - Predict the max time when a specific customer will respond to an offer.
+ - Predict the best offer to be sent to a particular customers.
+and many more..
 
 ### Installation Instructions
 1. Download project files:
